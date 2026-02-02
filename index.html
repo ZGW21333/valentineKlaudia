@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROSZE!!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="serce.png">
+</head>
+<body>
+    
+    <div class="baner">
+        <h1 id="h1">Czy zostaniesz moją walentynką???</h1>
+    </div>
+    <div class="gif">
+        <img  id="mainGif" src="Cat Love GIF by MYAOWL.gif" alt="">
+    </div>
+    <div class="buttons">
+        <button id="yesBtn">TAK!!</button>
+        <button id="noBtn"> nie :(</button>
+
+    </div>
+
+    <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const gif = document.getElementById("mainGif");
+    const h1 = document.getElementById("h1");
+
+    let yesScale = 1;
+    let noScale = 1;
+
+    const gifs = [
+        "Sad Big Eyes GIF.gif",
+        "1.gif",
+        "Please Please Crying GIF by Toca Boca.gif",
+        "Sonic The Hedgehog Please GIF by Mashed.gif",
+        "Awkward Teddy Bear GIF by luckycavity.gif",
+        "Cry Crying GIF by Sad Hamster.gif",
+        "Who Knows Idk GIF by Pudgy Penguins.gif",
+        "Welsh Corgi Please GIF by Lazy Corgi.gif",
+        "Sad Aww GIF by The Comedy Bar.gif"
+    ];
+    const gifs2 = [
+        "Hugging Hug GIF.gif",
+        "Hugging Hug GIF.gif",
+        "Hugging Hug GIF.gif"
+    ];
+
+    function changeGif() {
+        const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+        gif.src = randomGif;
+    }
+    function changeGif2() {
+    const randomGif = gifs2[Math.floor(Math.random() * gifs2.length)];
+    gif.src = randomGif;
+    }
+
+
+    yesBtn.addEventListener("click", () => {
+        
+        changeGif2();
+        document.getElementById("h1").innerHTML = "JESTEŚ WSPANIAŁA!!!!!!"
+    });
+
+    noBtn.addEventListener("click", () => {
+        yesScale += 0.15;
+        yesBtn.style.transform = `scale(${yesScale})`;
+        noScale -= 0.15;
+
+        if (noScale < 0.1) noScale = 0.1; 
+
+        noBtn.style.transform = `scale(${noScale})`;
+        changeGif();
+                document.getElementById("h1").innerHTML = "No prosze no"
+
+    });
+</script>
+
+</body>
+</html>

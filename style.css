@@ -1,0 +1,35 @@
+*{
+    background-color: rgb(14, 14, 97);
+    font-family:'Courier New', Courier, monospace;
+}
+.baner{
+    margin-top: 120px;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.gif{
+    width:180px;
+    margin: auto;
+}
+.gif img{
+    width: 180px;
+}
+button{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 40px;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+
+
+}
+.buttons{
+    text-align: center;
+}
+.zmniejsz {
+    transform: scale(0.6);
+    transition: transform 0.3s ease;
+}
